@@ -126,7 +126,7 @@ amf.Client.prototype._send = function(xhr, packet) {
     return;
   }
   
-  /* comment xhr.onreadystatechange and replace with this *//*
+  /* comment onload on error below and replace with onreadystatechage for a alternative location of error massage *//*
   xhr.onreadystatechange = function() {
     if (this.readyState === 1) {
       if (!this.busy) {
