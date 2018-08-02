@@ -15,4 +15,16 @@ The error appears on the left in the application under development. In this repl
 ![](./02.png)
 
 
-Hopefully this helps.
+The test code is very simple
+
+
+    describe('My Second Test', function() {
+    it('visit', function() {
+        cy.visit('http://localhost/cypress-readystatechange/');
+        cy.contains('Login').click();
+    });
+});
+
+
+
+Hope this helps.
