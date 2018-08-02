@@ -23,7 +23,7 @@ The test code is very simple
         cy.visit('http://localhost/cypress-readystatechange/');
         cy.contains('Login').click();
     });
-});
+
 
 
 
