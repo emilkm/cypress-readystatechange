@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>AMFJS</title>
+    <script src="amf.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var amfc = new amf.Client("app", "amf.php");
+        
+        console.log('invoke 1');
+        var p1 = amfc.invoke("service", "method", [['param']]);
+
+        p1.then(
+            (res) => {
+                console.log(res.message);
+            },
+            (res) => {
+                console.log(res.message);
+            }
+        );
+        
+        console.log('invoke 2');
+        var p2 = amfc.invoke("service", "method", [['param']]);
+
+        p2.then(
+            (res) => {
+                console.log(res.message);
+            },
+            (res) => {
+                console.log(res.message);
+            }
+        );
+    </script>
+    
+    <h1>...</h1>
+    <input type="button">Login</input>
+</body>
+</html>
